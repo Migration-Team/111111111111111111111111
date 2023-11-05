@@ -50,8 +50,8 @@
 	<define name="NO_PRELOAD_ALL" unless="PRELOAD_ALL"/>
 
 	<!--CDEV Engine's define names-->
-	<define name="ALLOW_MODS" if="desktop"/>
-	<define name="CRASH_HANDLER" if="desktop"/>
+	<define name="ALLOW_MODS" if="desktop || android"/>
+	<define name="CRASH_HANDLER" if="desktop || android"/>
 	<!--<define name="USE_VIDEOS"/>-->
 	
 
