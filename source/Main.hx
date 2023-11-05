@@ -60,6 +60,7 @@ class Main extends Sprite
 		#if CRASH_HANDLER
 		Lib.current.loaderInfo.uncaughtErrorEvents.addEventListener(UncaughtErrorEvent.UNCAUGHT_ERROR, onCrash);
 		#end
+		SUtil.gameCrashCheck();
 
 		if (stage != null)
 		{
@@ -109,7 +110,8 @@ class Main extends Sprite
 			CDevConfig.storeSaveData();
 		});
 		#end
-
+		SUtil.doTheCheck();
+			
 		addChild(new FlxGame(gameWidth, gameHeight, initialState, framerate, framerate, skipSplash, startFullscreen));
 
 		#if !mobile
