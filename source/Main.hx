@@ -192,7 +192,7 @@ class Main extends Sprite
 				conv += " ";
 		}*/
 
-		DiscordClient.shutdown();
+		//DiscordClient.shutdown();
 
 		if (FileSystem.exists(cdev_ch_path)){
 			//cool python crash handler!
