@@ -9,6 +9,8 @@ import flixel.FlxG;
 import flixel.graphics.frames.FlxAtlasFrames;
 import openfl.utils.AssetType;
 import openfl.utils.Assets as OpenFlAssets;
+
+import game.SUtil;
 // import sys.io.File;
 #if sys
 import sys.FileSystem;
@@ -135,7 +137,7 @@ class Paths
 
 	inline static public function getPreloadPath(file:String)
 	{
-		return 'assets/$file';
+		return SUtil.getPath() + 'assets/$file';
 	}
 
 	inline static public function file(file:String, type:AssetType = TEXT, ?library:String)
@@ -185,7 +187,7 @@ class Paths
 
 	inline static public function chartPath(key:String)
 	{
-		return 'assets/data/$CHARTS_PATH$key';
+		return SUtil.getPath() + 'assets/data/$CHARTS_PATH$key';
 	}
 
 	static public function sound(key:String, ?library:String):Dynamic
@@ -304,13 +306,13 @@ class Paths
 	#if USE_VIDEOS
 	inline static public function video(key:String)
 	{
-		return "assets/videos/" + key + ".mp4";
+		return SUtil.getPath() + "assets/videos/" + key + ".mp4";
 	}
 	#end
 
 	inline static public function font(key:String)
 	{
-		return 'assets/fonts/$key';
+		return SUtil.getPath() + 'assets/fonts/$key';
 	}
 
 	inline static public function getSparrowAtlas(key:String, ?library:String)
@@ -366,18 +368,18 @@ class Paths
 
 	inline static public function mods(key:String = '')
 	{
-		return 'cdev-mods/' + key;
+		return SUtil.getPath() + 'cdev-mods/' + key;
 	}
 
 	inline static public function cdModsFile(key:String = ''):String
 	{
-		return 'cdev-mods/' + key + '/' + 'mod.json';
+		return SUtil.getPath() + 'cdev-mods/' + key + '/' + 'mod.json';
 	}
 
 	inline static public function createModFolder(modFolderName:String = '')
 	{
 		// FileSystem.createDirectory('cdev-mods/$modFolderName');
-		var path:String = 'cdev-mods/$modFolderName/';
+		var path:String = SUtil.getPath() + 'cdev-mods/$modFolderName/';
 		var childrens:Array<String> = [];
 		var dumbFolders:Array<String> = [
 			'data',   //DATA FOLDER
@@ -429,7 +431,7 @@ class Paths
 
 	inline static public function modText(key:String)
 	{
-		return 'cdev-mods/' + key + '.txt';
+		return SUtil.getPath() + 'cdev-mods/' + key + '.txt';
 	}
 
 	inline static public function modJson(key:String)
@@ -573,7 +575,7 @@ class Paths
 			}
 		}
 
-		return 'cdev-mods/' + key; // ok yea, welp.
+		return SUtil.getPath() + 'cdev-mods/' + key; // ok yea, welp.
 	}
 	#end
 }
