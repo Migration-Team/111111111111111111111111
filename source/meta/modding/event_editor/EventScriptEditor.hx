@@ -4,7 +4,9 @@ import sys.io.File;
 import lime.system.Clipboard;
 import flixel.addons.ui.FlxUIInputText;
 import game.objects.Alphabet;
+#if desktop
 import game.cdev.engineutils.Discord.DiscordClient;
+#end
 import game.cdev.CDevConfig;
 import flixel.math.FlxMath;
 import flixel.group.FlxGroup.FlxTypedGroup;
