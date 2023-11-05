@@ -25,6 +25,7 @@ import flixel.FlxG;
 import game.cdev.engineutils.Discord.DiscordClient;
 #end
 import lime.app.Application;
+import game.SUtil;
 
 using StringTools;
 
