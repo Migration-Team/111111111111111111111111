@@ -105,7 +105,7 @@ class Main extends Sprite
 		Application.current.onExit.add(function(exitCode)
 		{
 			CDevConfig.onExitFunction();
-			DiscordClient.shutdown();
+			//DiscordClient.shutdown();
 			CDevConfig.storeSaveData();
 		});
 		#end
